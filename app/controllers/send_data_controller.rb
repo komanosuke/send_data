@@ -1,5 +1,5 @@
 class SendDataController < ApplicationController
-    skip_before_filter :verify_authenticity_token
+    protect_from_forgery with: :exception, only: :index
 
     def index
         # 読み込み時に一度パースが必要
