@@ -1,4 +1,5 @@
 class SendDataController < ApplicationController
+    require 'json'
     protect_from_forgery with: :exception, only: :index
 
     def index
