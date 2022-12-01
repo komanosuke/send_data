@@ -63,3 +63,5 @@ end
 gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
+
+gem 'rest-client'
