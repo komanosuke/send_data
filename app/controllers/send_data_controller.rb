@@ -25,8 +25,7 @@ class SendDataController < ApplicationController
         # else
         #     @json = 'ありません。'
         # end
-        @json = params
-        
+        @json = params[:json_data]
     end
 
     
