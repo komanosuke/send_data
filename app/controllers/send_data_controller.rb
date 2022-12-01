@@ -25,8 +25,10 @@ class SendDataController < ApplicationController
         # else
         #     @json = 'ありません。'
         # end
-        @json = params[:json_data].to_s
-        Datum.create(name: @json)
+        if request.get?
+            @json = params[:json_data].to_s
+            Datum.create(name: @json)
+        end
     end
 
     
