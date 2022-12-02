@@ -22,7 +22,7 @@ function postData(){
 		},
 	});
 }
-//setInterval(postData, 1000);
+setInterval(postData, 1000);
 
 
 
@@ -30,9 +30,9 @@ function lightUp(){
     let light_switch = document.getElementById('got').textContent;
     let light_box = document.getElementById('light-box');
     if(light_switch == 'FAN,ON'){
-        light_box.style.backgroundColor = '';
+        light_box.style.backgroundColor = 'yellow';
     } else if (light_switch == 'FAN,OFF'){
-        light_box.style.backgroundColor = '';
+        light_box.style.backgroundColor = 'lightgray';
     }
 }
 function submit(){
@@ -40,5 +40,5 @@ function submit(){
     submitButton.click();
 }
 
-//setInterval(submit, 1000);
-//setInterval(lightUp, 1000);
+setInterval(submit, 1000);
+setInterval(lightUp, 1000);
