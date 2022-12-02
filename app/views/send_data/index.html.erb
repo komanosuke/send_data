@@ -11,7 +11,7 @@
 <div id="light-box"></div>
 
 <%= form_tag(url_for(:action => 'index'), :remote => true) do %>
-    <%= submit_tag "更新" %>
+    <%= submit_tag "更新" ,{id: "submitButton"} %>
 <% end %>
 
 <%= link_to 'データ削除', {controller: 'send_data', action:'delete'} %>
