@@ -39,6 +39,6 @@ function submit(){
     submitButton.click();
 }
 
-setInterval(postData, 1000);
-setInterval(submit, 1000);
-setInterval(lightUp, 1000);
+// setInterval(postData, 1000);
+// setInterval(submit, 1000);
+// setInterval(lightUp, 1000);
