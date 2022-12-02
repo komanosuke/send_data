@@ -40,5 +40,5 @@ function submit(){
     submitButton.click();
 }
 
-setInterval(submit, 1000);
-setInterval(lightUp, 1000);
+//setInterval(submit, 1000);
+//setInterval(lightUp, 1000);
