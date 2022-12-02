@@ -25,10 +25,35 @@ class SendDataController < ApplicationController
         # else
         #     @json = 'ありません。'
         # end
-        if request.get?
-            @json = params[:json_data].to_s
-            Datum.create(name: @json)
+
+        if params[:os_data]
+            sent_data = params[:os_data]
+            Datum.create(name: sent_data)
+            logger.debug("送られてきたデータは、" + sent_data)
         end
+
+        if Datum.exists?
+            @json_data = Datum.last.name
+        end
+
+        if @json_data == 'FAN,ON'
+            @judge = 'FAN,ON'
+        elsif @json_data == 'FAN,OFF'
+            @judge = 'FAN,OFF'
+        else
+            @judge = 'error'
+        end
+
+        logger.debug(@judge)
+
+        respond_to do |format|
+            format.html
+            format.js
+        end
+    end
+
+    def delete
+        Datum.destroy_all
     end
 
     

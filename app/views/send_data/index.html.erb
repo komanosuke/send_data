@@ -1,10 +1,16 @@
-<p>JSONは<%= @json %></p>
-<p>パース後のデータ①は、<%= @data1 %></p>
-<p>パース後のデータ②は、<%= @data2 %></p>
-<p>パース後のデータ③は、<%= @data3 %></p>
+<p>送信したデータは・・・</p>
+<p id="data"></p>
 
 <h1>Color</h1>
 <div id="color-box"></div>
 
 <h1>Light</h1>
 <div id="light-box"></div>
+
+<%= form_tag(url_for(:action => 'index'), :remote => true) do %>
+    <%= submit_tag "更新" %>
+<% end %>
+
+<%= link_to 'データ削除', {controller: 'connect', action:'delete'} %>
+
+<%= javascript_pack_tag 'index' %>

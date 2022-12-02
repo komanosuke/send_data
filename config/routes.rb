@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   get '/', to: 'send_data#index'
   get 'send_data', to: 'send_data#index'
   get 'send_data/index'
+
+  get 'send_data/delete'
 end
