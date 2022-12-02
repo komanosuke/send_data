@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   get 'send_data', to: 'send_data#index'
   get 'send_data/index'
 
+  post '/', to: 'send_data#index'
+  post 'send_data', to: 'send_data#index'
+  post 'send_data/index'
+
   get 'send_data/delete'
 end

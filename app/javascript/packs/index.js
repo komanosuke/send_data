@@ -22,4 +22,4 @@ function postData(){
 		},
 	});
 }
-setInterval(postData, 1000);
+//setInterval(postData, 1000);
